@@ -1,18 +1,7 @@
-input.c: In function ‘int main()’:
-input.c:18:20: error: invalid conversion from ‘void (*)()’ to ‘__sighandler_t’ {aka ‘void (*)(int)’} [-fpermissive]
-   18 |     sigset(SIGINT, handle_sigint);
-      |                    ^~~~~~~~~~~~~
-      |                    |
-      |                    void (*)()
-In file included from input.c:4:
-/usr/include/signal.h:367:57: note:   initializing argument 2 of ‘void (* sigset(int, __sighandler_t))(int)’
-  367 | extern __sighandler_t sigset (int __sig, __sighandler_t __disp) __THROW
-      |                                          ~~~~~~~~~~~~~~~^~~~~~
-input.c:18:11: warning: ‘void (* sigset(int, __sighandler_t))(int)’ is deprecated: Use the signal and sigprocmask functions instead [-Wdeprecated-declarations]
-   18 |     sigset(SIGINT, handle_sigint);
-      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
-/usr/include/signal.h:367:23: note: declared here
-  367 | extern __sighandler_t sigset (int __sig, __sighandler_t __disp) __THROW
-      |                       ^~~~~~
+In file included from main.c:1:
+/usr/include/libnotify/notify.h:25:10: fatal error: glib.h: No such file or directory
+   25 | #include <glib.h>
+      |          ^~~~~~~~
+compilation terminated.
 cc1plus: fatal error: ./: No such file or directory
 compilation terminated.
